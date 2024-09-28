@@ -1,6 +1,6 @@
-# Web Developing
+# Web Development
 
-Welcome to the **Web Developing** project! This is a brief overview of the key areas of focus in this project.
+Welcome to the **Web Development** project! This is a brief overview of the key areas of focus in this project.
 
 ## Table of Contents
 1. [Technologies](#technologies)
