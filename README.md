@@ -1,7 +1,7 @@
 # Web Development
 
 Welcome to the **Web Development** project! This is a brief overview of the key areas of focus in this project.
-
+Task: Development of a website in the form of a blog/magazine or the creation of a complete CMS project. It depends on time, resources...
 ## Table of Contents
 1. [Technologies](#technologies)
 2. [Features](#features)
