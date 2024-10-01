@@ -17,6 +17,8 @@ class Content extends AppConfig {
 
 		$site = AppConfig::GetConfig('site');
 
+		/*
+
 		if (!isset($_SESSION[$site]['first']) AND (($opt1 == ''))) {
 
 			$_SESSION[$site]['first'] = 1;
@@ -25,6 +27,10 @@ class Content extends AppConfig {
 
 			return self::Nav().self::Content().self::Footer();
 		}
+
+		*/
+
+		return self::Nav().self::Front().self::Content().self::Footer();
 	}
 	
 	private static function Nav() {
