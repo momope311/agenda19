@@ -1,0 +1,198 @@
+/* Resetovanje svih margina, paddinga i granica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Postavljanje osnovnih fontova i veličina */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+/* Definisanje širine i centriranje sadržaja */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* Linkovi bez podvlačenja i osnovne boje */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Stajling osnovnih HTML tagova */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+p {
+  margin-bottom: 15px;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Forme */
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+.navbar-wrapper {
+	background-color: #2c3e50;
+	width: 100%;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 14px 30px;
+	min-height: 60px;
+}
+.navbar .site-name {
+	color: white;
+	font-size: 26px;
+	margin-top: 0px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.navbar .hamburger {
+	display: none;
+}
+a.site-name:hover {
+	color: #259dbd;
+}
+.navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+.navbar ul li {
+	position: relative;
+}
+.navbar ul li a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.navbar ul li a:hover, .dropdown:hover .dropbtn {
+	background-color: #259dbd;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	right: 0; /* Ensure the dropdown stays inside the screen */
+}
+.dropdown-content a {
+	color: #2c3e50 !important;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block !important;
+	text-align: left !important;
+}
+.dropdown-content a:hover {
+	color: white !important;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#front {
+	background-color: #18aebc;
+	min-height: 300px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+#front h1 {
+	font-size: 46px;
+}
+#front h2 {
+	font-size: 22px;
+	font-weight: 100;
+}
+.white-line {
+	display: inline-block;
+	border-bottom: 3px solid white;
+	padding-bottom: 5px;
+}
+#front img {
+	margin: 30px;
+	padding: 0 20px;
+	border-radius: 60px;
+}
+
+@media screen and (max-width: 850px) {
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.navbar ul {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+	}
+	.navbar ul li {
+		text-align: left;
+		width: 100%;
+	}
+	.navbar ul li a {
+		width: 100%;
+		padding: 12px;
+		text-align: left;
+	}
+	.navbar .site-name {
+		color: white;
+		font-size: 26px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin-top: 10px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.navbar .hamburger {
+		display: block;
+		background-color: #2c3e50;
+		border: none;
+		color: white;
+		padding: 14px 10px;
+		margin-top: -58px;
+		margin-right: -8px;
+		font-size: 30px;
+		cursor: pointer;
+		margin-left: auto; /* Align hamburger to the right */
+	}
+	.navbar.open ul {
+		display: flex;
+	}
+	.dropdown-content {
+		left: 0;
+	}
+}

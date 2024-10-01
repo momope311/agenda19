@@ -89,7 +89,9 @@ class Decode extends AppConfig {
 		}
 
 		$body = Content::Body();
-		
+
+		$temp = AppConfig::GetConfig('temp');
+		$root = AppConfig::GetConfig('root');
 		$lb = AppConfig::GetLangAll($lett);
 
 		return $conversion_table = array (
@@ -98,7 +100,9 @@ class Decode extends AppConfig {
 			"{#meta_desc#}"			=> $lb['meta_desc'],
 			"{#meta_keys#}"			=> $lb['meta_keys'],
 			"{#meta_auth#}"			=> $lb['meta_auth'],
+			"{#favicon#}"			=> "<link rel='icon' href='".$root."favicon.ico'>",
 			"{#title#}"				=> $lb['title'].' | '.$opt1,
+			"{#basecss#}"			=> "<link rel='stylesheet' href='".$root."temp/".$temp."/css/style.css'>",
 			"{#body#}"				=> $body
 		);
 	}

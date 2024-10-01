@@ -6,9 +6,9 @@
 	<meta name='keywords' content='{#meta_keys#}'>
 	<meta name='author' content='{#meta_auth#}'>
 	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-	<link rel='icon' href='<?php echo $root."favicon.ico"; ?>'>
+	{#favicon#}
 	<title>{#title#}</title>
-	<link rel='stylesheet' href='<?php echo $root."temp/".$temp."/css/styles.css"; ?>'>
+	{#basecss#}
 </head>
 <body>
 {#body#}
