@@ -43,8 +43,12 @@ class Content extends AppConfig {
 	
 	private static function Front() {
 		
-		$temp = AppConfig::GetConfig('temp');
-		$root = AppConfig::GetConfig('root');
+		global $lett;
+
+		$temp 	= AppConfig::GetConfig('temp');
+		$root 	= AppConfig::GetConfig('root');
+		$title 	= AppConfig::GetLang($lett, 'title');
+		$desc 	= AppConfig::GetLang($lett, 'desc');
 		
 		require_once 'temp/'.$temp.'/front.php';
 		return $front;
