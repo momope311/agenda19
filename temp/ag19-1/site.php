@@ -29,7 +29,7 @@
 		.white-line {
 			display: inline-block;
 			border-bottom: 4px solid white;
-			padding-bottom: 14px;
+			padding-bottom: 10px;
 		}
 		#front h2 {
 			font-size: 24px;
@@ -42,6 +42,28 @@
 			width: 80%;
 			border-radius: 0 0 60px 60px;
 			box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.5);
+		}
+		@media screen and (max-width: 940px) {
+			#front img {
+				margin: 20px;
+				border-radius: 0 0 40px 40px;
+			}
+		}
+		@media screen and (max-width: 700px) {
+			#front img {
+				border-radius: 0 0 20px 20px;
+			}
+			#front h2 {
+				font-size: 20px;
+				padding-left: 10px;
+				padding-right: 10px;
+				font-weight: 400;
+			}
+		}
+		@media screen and (max-width: 380px) {
+			#front h1 {
+				font-size: 40px;
+			}
 		}
 	</style>
 </head>
