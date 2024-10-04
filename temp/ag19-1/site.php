@@ -10,6 +10,43 @@
 	<title>{#title#}</title>
 	{#basecss#}
 	<style>
+		#nav-wrap {
+			background-color: #2c3e50;
+			width: 100%;
+		}
+		#navigation {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 14px 30px;
+			min-height: 60px;
+		}
+		#left-menu, #right-menu {
+			display: flex;
+			align-items: center;
+		}
+		#left-menu {
+			margin-right: auto;
+		}
+		#right-menu {
+			margin-left: auto;
+		}
+		#navigation ul {
+			list-style-type: none;
+		}
+		#navigation ul li {
+			display: inline-flex;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		#navigation ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 20px;
+		}
+
 		#front {
 			background-color: #18aebc;
 			min-height: 300px;
