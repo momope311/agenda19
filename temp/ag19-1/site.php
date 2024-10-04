@@ -10,6 +10,7 @@
 	<title>{#title#}</title>
 	{#basecss#}
 	<style>
+		/* Navigacija Top */
 		#nav-wrap {
 			background-color: #2c3e50;
 			width: 100%;
@@ -38,6 +39,7 @@
 		}
 		#navigation ul li {
 			display: inline-flex;
+			position: relative;
 			padding-left: 20px;
 			padding-right: 20px;
 		}
@@ -46,7 +48,48 @@
 			text-decoration: none;
 			font-size: 20px;
 		}
+		ul#left-menu li a {
+			font-size: 26px;
+			font-weight: 400;
+		}
+		#navigation ul li a:hover {
+			color: #18aebc;
+		}
+		.dropdown-menu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #34495e;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+		.dropdown-menu li {
+			display: flex;
+			justify-content: center;
+			padding: 10px 0;
+		}
+		.dropdown-menu li a {
+			color: white;
+			font-size: 18px;
+			padding: 10px 20px;
+			display: block;
+			white-space: nowrap;
+			text-align: left;
+			margin-left: -60px;
+		}
+		.dropdown:hover .dropdown-menu {
+			display: block;
+			color: #18aebc;
+		}
+		.dropdown-menu li a:hover {
+			color: #18aebc;
+			font-style: italic;
+		}
 
+		/* Front Slika*/
 		#front {
 			background-color: #18aebc;
 			min-height: 300px;
