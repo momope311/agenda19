@@ -8,6 +8,16 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 	{#favicon#}
 	<title>{#title#}</title>
+	<script type='text/javascript'>
+		function Dropd() {
+			var x = document.getElementById('links');
+			if (x.style.display === 'block') {
+				x.style.display = 'none';
+			} else {
+				x.style.display = 'block';
+			}
+		} 
+	</script>
 	{#basecss#}
 	<style>
 		/* Navigacija Top */
@@ -77,7 +87,7 @@
 		}
 		.dropdown-menu li a {
 			color: white;
-			font-size: 18px;
+			font-size: 18px !important;
 			padding: 5px 20px;
 			display: block;
 			white-space: nowrap;
@@ -90,6 +100,9 @@
 		}
 		.dropdown-menu li a:hover {
 			color: #18aebc;
+		}
+		.mobnav {
+			display: none;
 		}
 
 		/* Front Slika*/
@@ -127,6 +140,52 @@
 			box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.5);
 		}
 		@media screen and (max-width: 940px) {
+			#navigation {
+				display: none;
+			}
+			.mobnav {
+				display: block;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				min-height: 60px;
+				position: relative;
+				padding: 14px 30px;
+				margin: 0 auto;
+			}
+			.mobnav #links {
+			  	display: none;
+			}
+			.mobnav a {
+				color: white;
+				padding: 14px 30px;
+				text-decoration: none;
+				font-size: 18px;
+				display: block;
+			}
+			.mobnav a.lang {
+				margin-left: 20px;
+			}
+			.logo {
+				background-color: #2c3e50;
+				color: white;
+				font-size: 26px !important;
+				font-weight: 400;
+				margin-right: auto;
+				margin-left: -20px;
+				margin-top: 2px;
+			}
+			.mobnav a.icon {
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 14px;
+				font-size: 26px !important;
+			}
+			.mobnav a:hover {
+			  	color: #18aebc;
+			}
+
 			#front img {
 				margin: 20px;
 				border-radius: 0 0 40px 40px;

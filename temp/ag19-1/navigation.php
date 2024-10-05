@@ -23,6 +23,19 @@ $navigation =
 			</li>
 		</ul>
 	</div>
+	<div class='mobnav'>
+		<a href='".$url.$lett."' class='logo'>".$title."</a>
+		<div id='links'>
+			<a href='".$root.$lett."/".$opt1."'>".$home."</a>
+			<a href='".$root.$lett."/magazin'>".$magazin."</a>
+			<a href='".$root.$lett."/categories'>".$kategorije."</a>
+			<a href='".$root.$lett."/archive'>".$arhiva."</a>
+			<a href='".$root."eng' class='lang'>- ".$engleski."</a>
+			<a href='".$root."lat' class='lang'>- ".$latinica."</a>
+			<a href='".$root."cyr' class='lang'>- ".$cirilica."</a>
+		</div>
+		<a href='javascript:void(0);' class='icon' onclick='Dropd()'>&#9776;</a>
+	</div>
 </section>
 
 ";
