@@ -38,6 +38,7 @@ class Content extends AppConfig {
 		global $lett, $opt1;
 		
 		$home = AppConfig::GetConfig('home');
+		$ln = Links::GetLinks($lett);
 		
 		if ($opt1 == $home) {
 			$h = "class='active'";$m = '';$k = '';$a = '';

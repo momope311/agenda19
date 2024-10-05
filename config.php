@@ -127,11 +127,6 @@ class AppConfig {
 
         $path = array_pad($path, 5, '');
         
-        if (empty($path[1])) {
-            
-            $path[1] = self::GetConfig('home');
-        }
-        
         return $path;
     }
 }

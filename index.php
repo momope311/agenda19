@@ -7,6 +7,7 @@ require_once 'engine/db.php';
 require_once 'engine/start.php';
 require_once 'engine/content.php';
 require_once 'engine/decode.php';
+require_once 'engine/links.php';
 
 // Errors
 Errors::Display();
