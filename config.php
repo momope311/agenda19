@@ -17,15 +17,23 @@ class AppConfig {
         'password'  => '',                              // db password
         'database'  => 'agenda19',                      // db name
         'temp'      => 'ag19-1',                        // site template folder
-        'dfl'       => 'cir'                            // Default lang (lat = SR-latinica, cir = SR-cirilica, eng = English)
+        'dfl'       => 'eng',                           // Default lang (lat = SR-latinica, cyr = SR-cirilica, eng = English)
+        'home'      => 'news'                           // Default content
     ];
 
     // Lang data - srpski
     private static $lang_sr = [
         
         'html_lang'     => 'sr',
-        'home'          => 'novosti',
+        'home'          => 'Новости',
         'title'         => 'Агенда19',
+        'magazin'       => 'Магазин',
+        'kategorije'    => 'Категорије',
+        'arhiva'        => 'Архива',
+        'jezik'         => 'Језик',
+        'engleski'      => 'Енглески',
+        'latinica'      => 'Латиница',
+        'cirilica'      => 'Ћирилица',
         'desc'          => 'Истраживачки рад - Нове технологије - Здрав живот',
         'meta_desc'     => 'Дигитални магазин који се бави новим, модерним, популарним темама. Има места за свакога. Можете много да научите и себи поправите дан.',
         'meta_keys'     => 'наука, мудрости, филозофија, мотивација, електроника, програмирање, уметност, приче, политика, интернет, блог, живот, магазин',
@@ -37,8 +45,15 @@ class AppConfig {
     private static $lang_en = [
         
         'html_lang'     => 'en',
-        'home'          => 'news',
+        'home'          => 'News',
         'title'         => 'Agenda19',
+        'magazin'       => 'Magazin',
+        'kategorije'    => 'Categories',
+        'arhiva'        => 'Archive',
+        'jezik'         => 'Language',
+        'engleski'      => 'English',
+        'latinica'      => 'Latin',
+        'cirilica'      => 'Cyrillic',
         'desc'          => 'Research work - New Technologies - Healthy Living',
         'meta_desc'     => 'A digital magazine that covers new, modern, popular topics. There is something for everyone. You can learn a lot and improve your day.',
         'meta_keys'     => 'science, wisdom, philosophy, motivation, electronics, programming, art, stories, politics, internet, blog, life, magazine',
@@ -55,7 +70,7 @@ class AppConfig {
     // Cet lang config parametar (one)
     protected static function GetLang($lett, $key) {
         
-        if (($lett === 'cir') || ($lett === 'lat')) {
+        if (($lett === 'cyr') || ($lett === 'lat')) {
             
             return isset(self::$lang_sr[$key]) ? self::$lang_sr[$key] : null;
         } elseif ($lett === 'eng') {
@@ -70,7 +85,7 @@ class AppConfig {
     // Get basic language data (all)
     protected static function GetLangAll($lett) {
         
-        if (($lett === 'cir') || ($lett === 'lat')) {
+        if (($lett === 'cyr') || ($lett === 'lat')) {
             
             return self::$lang_sr;
         } elseif ($lett === 'eng') {
@@ -93,9 +108,9 @@ class AppConfig {
 
         if (isset($path[0])) {
             
-            if ($path[0] == 'cir') {
+            if ($path[0] == 'cyr') {
 
-                $path[0] = 'cir';
+                $path[0] = 'cyr';
             } elseif ($path[0] == 'lat') {
 
                 $path[0] = 'lat';
@@ -109,6 +124,11 @@ class AppConfig {
         }
 
         $path = array_pad($path, 5, '');
+        
+        if (empty($path[1])) {
+            
+            $path[1] = self::GetConfig('home');
+        }
         
         return $path;
     }

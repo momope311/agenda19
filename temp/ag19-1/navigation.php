@@ -6,18 +6,19 @@ $navigation =
 <section id='nav-wrap'>
 	<div id='navigation'>
 		<ul id='left-menu'>
-			<li><a href='#'>Агенда19</a></li>
+			<li><a href='".$url.$lett."'>".$title."</a></li>
 		</ul>
 		<ul id='right-menu'>
-			<li><a href='#'>Магазин</a></li>
-			<li><a href='#'>Категорије</a></li>
-			<li><a href='#'>Архива</a></li>
+			<li><a href='".$root.$lett."/".$opt1."'>".$home."</a></li>
+			<li><a href='".$root.$lett."/magazin'>".$magazin."</a></li>
+			<li><a href='".$root.$lett."/categories'>".$kategorije."</a></li>
+			<li><a href='".$root.$lett."/archive'>".$arhiva."</a></li>
 			<li class='dropdown'>
-				<a href='#'>Језик</a>
+				<a href='#'>".$jezik."</a>
 				<ul class='dropdown-menu'>
-					<li><a href='#'>Енглески</a></li>
-					<li><a href='#'>Српски</a></li>
-					<li><a href='#'>Француски</a></li>
+					<li><a href='".$root."eng'>".$engleski."</a></li><br>
+					<li><a href='".$root."lat'>".$latinica."</a></li><br>
+					<li><a href='".$root."cyr'>".$cirilica."</a></li>
 				</ul>
 			</li>
 		</ul>

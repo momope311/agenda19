@@ -35,7 +35,21 @@ class Content extends AppConfig {
 	
 	private static function Nav() {
 		
-		$temp = AppConfig::GetConfig('temp');
+		global $lett, $opt1;
+
+		$temp 	= AppConfig::GetConfig('temp');
+		$root 	= AppConfig::GetConfig('root');
+		$url 	= AppConfig::GetConfig('url');
+
+		$title 			= AppConfig::GetLang($lett, 'title');
+		$home 			= AppConfig::GetLang($lett, 'home');
+		$magazin 		= AppConfig::GetLang($lett, 'magazin');
+		$kategorije 	= AppConfig::GetLang($lett, 'kategorije');
+		$arhiva	 		= AppConfig::GetLang($lett, 'arhiva');
+		$jezik 			= AppConfig::GetLang($lett, 'jezik');
+		$engleski 		= AppConfig::GetLang($lett, 'engleski');
+		$latinica 		= AppConfig::GetLang($lett, 'latinica');
+		$cirilica 		= AppConfig::GetLang($lett, 'cirilica');
 
 		require_once 'temp/'.$temp.'/navigation.php';
 		return $navigation;	

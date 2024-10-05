@@ -14,6 +14,10 @@
 		#nav-wrap {
 			background-color: #2c3e50;
 			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
 		}
 		#navigation {
 			display: flex;
@@ -74,7 +78,7 @@
 		.dropdown-menu li a {
 			color: white;
 			font-size: 18px;
-			padding: 10px 20px;
+			padding: 5px 20px;
 			display: block;
 			white-space: nowrap;
 			text-align: left;
@@ -86,7 +90,6 @@
 		}
 		.dropdown-menu li a:hover {
 			color: #18aebc;
-			font-style: italic;
 		}
 
 		/* Front Slika*/
