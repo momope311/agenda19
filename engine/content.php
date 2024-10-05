@@ -36,6 +36,20 @@ class Content extends AppConfig {
 	private static function Nav() {
 		
 		global $lett, $opt1;
+		
+		$home = AppConfig::GetConfig('home');
+		
+		if ($opt1 == $home) {
+			$h = "class='active'";$m = '';$k = '';$a = '';
+		} elseif ($opt1 == 'magazin') {
+			$m = "class='active'";$h = '';$k = '';$a = '';
+		} elseif ($opt1 == 'categories') {
+			$k = "class='active'";$h = '';$m = '';$a = '';
+		} elseif ($opt1 == 'archive') {
+			$a = "class='active'";$h = '';$k = '';$m = '';
+		} else {
+			$h = '';$m = '';$k = '';$a = '';
+		}
 
 		$temp 	= AppConfig::GetConfig('temp');
 		$root 	= AppConfig::GetConfig('root');

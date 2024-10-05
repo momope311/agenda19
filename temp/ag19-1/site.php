@@ -54,13 +54,13 @@
 		#navigation ul li {
 			display: inline-flex;
 			position: relative;
-			padding-left: 20px;
-			padding-right: 20px;
 		}
 		#navigation ul li a {
 			color: white;
 			text-decoration: none;
-			font-size: 20px;
+			font-size: 18px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		ul#left-menu li a {
 			font-size: 26px;
@@ -74,7 +74,7 @@
 			position: absolute;
 			top: 100%;
 			left: 50%;
-			transform: translateX(-50%);
+			transform: translateX(-60%);
 			background-color: #34495e;
 			min-width: 160px;
 			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -87,12 +87,12 @@
 		}
 		.dropdown-menu li a {
 			color: white;
-			font-size: 18px !important;
-			padding: 5px 20px;
+			font-size: 17px !important;
+			padding: 3px 30px;
 			display: block;
 			white-space: nowrap;
 			text-align: left;
-			margin-left: -60px;
+			margin-left: -20px;
 		}
 		.dropdown:hover .dropdown-menu {
 			display: block;
@@ -103,6 +103,9 @@
 		}
 		.mobnav {
 			display: none;
+		}
+		.active {
+			color: #18aebc !important;
 		}
 
 		/* Front Slika*/
@@ -140,6 +143,15 @@
 			box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.5);
 		}
 
+		/* glavni sadržaj content */
+		#content {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 14px 30px;
+			min-height: 300px;
+		}
+
+		/* footer */
 		#footer {
 			background-color: #2c3e50;
 			display: flex;
