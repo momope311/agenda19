@@ -139,6 +139,20 @@
 			border-radius: 0 0 60px 60px;
 			box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.5);
 		}
+
+		#footer {
+			background-color: #2c3e50;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			padding: 14px 30px;
+			min-height: 100px;
+			color: white;
+		}
+		#footer .copy {
+			color: #aaa;
+		}
 		@media screen and (max-width: 940px) {
 			#navigation {
 				display: none;
@@ -148,7 +162,7 @@
 				justify-content: center;
 				align-items: center;
 				overflow: hidden;
-				min-height: 60px;
+				min-height: 62px;
 				position: relative;
 				padding: 14px 30px;
 				margin: 0 auto;

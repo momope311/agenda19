@@ -78,7 +78,10 @@ class Content extends AppConfig {
 
 	private static function Footer() {
 		
+		global $lett;
+		
 		$temp = AppConfig::GetConfig('temp');
+		$copy = AppConfig::GetLang($lett, 'copy');
 		
 		require_once 'temp/'.$temp.'/footer.php';
 		return $footer;
