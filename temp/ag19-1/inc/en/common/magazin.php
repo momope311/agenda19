@@ -6,7 +6,7 @@ $s = "<p class='red'>No articles!</p>";
 $content =
 "
 <section id='content'>
-<h1 class='cent'>NEWS</h1>
+<h1 class='cent'>MAGAZIN</h1>
 $s
 </section>
 ";

@@ -51,6 +51,16 @@ class Content extends AppConfig {
 			$n = '';$m = '';$k = '';$a = '';
 		}
 
+		if ($lett == 'eng') {
+			$e = 'active';$l = '';$c = '';
+		} elseif ($lett == 'lat') {
+			$l = 'active';$e = '';$c = '';
+		} elseif ($lett == 'cyr') {
+			$c = 'active';$l = '';$e = '';
+		} else {
+			$e = '';$l = '';$c = '';
+		}
+
 		$temp 	= AppConfig::GetConfig('temp');
 		$root 	= AppConfig::GetConfig('root');
 		$url 	= AppConfig::GetConfig('url');

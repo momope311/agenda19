@@ -1,12 +1,12 @@
 <?php
 if(!defined('PROTECT')){die('Protected Content!');}
 
-$s = "<p class='red'>No articles!</p>";
+$s = "<p class='red'>Нема чланака!</p>";
 
 $content =
 "
 <section id='content'>
-<h1 class='cent'>NEWS</h1>
+<h1 class='cent'>МАГАЗИН</h1>
 $s
 </section>
 ";

@@ -7,7 +7,7 @@ class AppConfig {
     private static $conf = [
         
         'errors'    => 1,                               // Display errors 1 = yes 0 = no
-        'works'     => 1,                               // Works on site 0 = no 1 = yes
+        'works'     => 0,                               // Works on site 0 = no 1 = yes
         'compress'  => 0,                               // Compress html content
         'url'       => 'http://localhost/agenda19/',    // URL site
         'root'      => '/agenda19/',                    // root site
@@ -31,8 +31,8 @@ class AppConfig {
         'kategorije'    => 'Категорије',
         'arhiva'        => 'Архива',
         'jezik'         => 'Језик',
-        'engleski'      => 'Енглески',
-        'latinica'      => 'Латиница',
+        'engleski'      => 'Engleski',
+        'latinica'      => 'Latinica',
         'cirilica'      => 'Ћирилица',
         'copy'          => 'Агенда19 © 2024. Сва права задржана.',
         'desc'          => 'Истраживачки рад - Нове технологије - Здрав живот',
@@ -55,8 +55,8 @@ class AppConfig {
         'arhiva'        => 'Archive',
         'jezik'         => 'Language',
         'engleski'      => 'English',
-        'latinica'      => 'Latin',
-        'cirilica'      => 'Cyrillic',
+        'latinica'      => 'SR Latin',
+        'cirilica'      => 'SR Cyrillic',
         'copy'          => 'Agenda19 © 2024. All rights reserved.',
         'desc'          => 'Research work - New Technologies - Healthy Living',
         'meta_desc'     => 'A digital magazine that covers new, modern, popular topics. There is something for everyone. You can learn a lot and improve your day.',

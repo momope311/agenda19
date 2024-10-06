@@ -16,9 +16,9 @@ $navigation =
 			<li class='dropdown'>
 				<a href='#'>".$jezik."</a>
 				<ul class='dropdown-menu'>
-					<li><a href='".$root."eng'>- ".$engleski."</a></li><br>
-					<li><a href='".$root."lat'>- ".$latinica."</a></li><br>
-					<li><a href='".$root."cyr'>- ".$cirilica."</a></li>
+					<li><a href='".$root."eng#content' class='$e'>- ".$engleski."</a></li><br>
+					<li><a href='".$root."lat#content' class='$l'>- ".$latinica."</a></li><br>
+					<li><a href='".$root."cyr#content' class='$c'>- ".$cirilica."</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -30,9 +30,9 @@ $navigation =
 			<a ".$m." href='".$root.$lett."/".$ln['magazin']."#content'>".$magazin."</a>
 			<a ".$k." href='".$root.$lett."/".$ln['kategorije']."#content'>".$kategorije."</a>
 			<a ".$a." href='".$root.$lett."/".$ln['arhiva']."#content'>".$arhiva."</a>
-			<a href='".$root."eng' class='lang'>- ".$engleski."</a>
-			<a href='".$root."lat' class='lang'>- ".$latinica."</a>
-			<a href='".$root."cyr' class='lang'>- ".$cirilica."</a>
+			<a href='".$root."eng#content' class='lang $e'>- ".$engleski."</a>
+			<a href='".$root."lat#content' class='lang $l'>- ".$latinica."</a>
+			<a href='".$root."cyr#content' class='lang $c'>- ".$cirilica."</a>
 		</div>
 		<a href='javascript:void(0);' class='icon' onclick='Dropd()'>&#9776;</a>
 	</div>
