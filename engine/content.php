@@ -17,19 +17,6 @@ class Content extends AppConfig {
 
 		$site = AppConfig::GetConfig('site');
 
-		/*
-
-		if (!isset($_SESSION[$site]['first']) AND (($opt1 == ''))) {
-
-			$_SESSION[$site]['first'] = 1;
-			return self::Nav().self::Front().self::Content().self::Footer();
-		} else {
-
-			return self::Nav().self::Content().self::Footer();
-		}
-
-		*/
-
 		return self::Nav().self::Front().self::Content().self::Footer();
 	}
 	

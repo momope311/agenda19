@@ -34,7 +34,7 @@ class AppConfig {
         'engleski'      => 'Engleski',
         'latinica'      => 'Latinica',
         'cirilica'      => 'Ћирилица',
-        'copy'          => 'Агенда19 © 2024. Сва права задржана.',
+        'copy'          => 'Агенда19 © %s. Сва права задржана.',
         'desc'          => 'Истраживачки рад - Нове технологије - Здрав живот',
         'meta_desc'     => 'Дигитални магазин који се бави новим, модерним, популарним темама. Има места за свакога. Можете много да научите и себи поправите дан.',
         'meta_keys'     => 'наука, мудрости, филозофија, мотивација, електроника, програмирање, уметност, приче, политика, интернет, блог, живот, магазин',
@@ -57,7 +57,7 @@ class AppConfig {
         'engleski'      => 'English',
         'latinica'      => 'SR Latin',
         'cirilica'      => 'SR Cyrillic',
-        'copy'          => 'Agenda19 © 2024. All rights reserved.',
+        'copy'          => 'Agenda19 © %s. All rights reserved.',
         'desc'          => 'Research work - New Technologies - Healthy Living',
         'meta_desc'     => 'A digital magazine that covers new, modern, popular topics. There is something for everyone. You can learn a lot and improve your day.',
         'meta_keys'     => 'science, wisdom, philosophy, motivation, electronics, programming, art, stories, politics, internet, blog, life, magazine',
@@ -77,9 +77,19 @@ class AppConfig {
         
         if (($lett === 'cyr') || ($lett === 'lat')) {
             
+            if ($key === 'copy') {
+                
+                return sprintf(self::$lang_sr[$key], date('Y'));
+            }
+
             return isset(self::$lang_sr[$key]) ? self::$lang_sr[$key] : null;
         } elseif ($lett === 'eng') {
             
+            if ($key === 'copy') {
+                
+                return sprintf(self::$lang_en[$key], date('Y'));
+            }
+
             return isset(self::$lang_en[$key]) ? self::$lang_en[$key] : null;
         } else {
             
