@@ -9,10 +9,10 @@ $navigation =
 			<li><a href='".$url."'>".$title."</a></li>
 		</ul>
 		<ul id='right-menu'>
-			<li><a ".$h." href='".$root.$lett."/".$ln['novosti']."'>".$home."</a></li>
-			<li><a ".$m." href='".$root.$lett."/".$ln['magazin']."'>".$magazin."</a></li>
-			<li><a ".$k." href='".$root.$lett."/".$ln['kategorije']."'>".$kategorije."</a></li>
-			<li><a ".$a." href='".$root.$lett."/".$ln['arhiva']."'>".$arhiva."</a></li>
+			<li><a ".$n." href='".$root.$lett."/".$ln['novosti']."#content'>".$home."</a></li>
+			<li><a ".$m." href='".$root.$lett."/".$ln['magazin']."#content'>".$magazin."</a></li>
+			<li><a ".$k." href='".$root.$lett."/".$ln['kategorije']."#content'>".$kategorije."</a></li>
+			<li><a ".$a." href='".$root.$lett."/".$ln['arhiva']."#content'>".$arhiva."</a></li>
 			<li class='dropdown'>
 				<a href='#'>".$jezik."</a>
 				<ul class='dropdown-menu'>
@@ -26,10 +26,10 @@ $navigation =
 	<div class='mobnav'>
 		<a href='".$url.$lett."' class='logo'>".$title."</a>
 		<div id='links'>
-			<a ".$h." href='".$root.$lett."/".$ln['novosti']."'>".$home."</a>
-			<a ".$m." href='".$root.$lett."/".$ln['magazin']."'>".$magazin."</a>
-			<a ".$k." href='".$root.$lett."/".$ln['kategorije']."'>".$kategorije."</a>
-			<a ".$a." href='".$root.$lett."/".$ln['arhiva']."'>".$arhiva."</a>
+			<a ".$n." href='".$root.$lett."/".$ln['novosti']."#content'>".$home."</a>
+			<a ".$m." href='".$root.$lett."/".$ln['magazin']."#content'>".$magazin."</a>
+			<a ".$k." href='".$root.$lett."/".$ln['kategorije']."#content'>".$kategorije."</a>
+			<a ".$a." href='".$root.$lett."/".$ln['arhiva']."#content'>".$arhiva."</a>
 			<a href='".$root."eng' class='lang'>- ".$engleski."</a>
 			<a href='".$root."lat' class='lang'>- ".$latinica."</a>
 			<a href='".$root."cyr' class='lang'>- ".$cirilica."</a>

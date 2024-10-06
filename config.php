@@ -7,7 +7,7 @@ class AppConfig {
     private static $conf = [
         
         'errors'    => 1,                               // Display errors 1 = yes 0 = no
-        'works'     => 0,                               // Works on site 0 = no 1 = yes
+        'works'     => 1,                               // Works on site 0 = no 1 = yes
         'compress'  => 0,                               // Compress html content
         'url'       => 'http://localhost/agenda19/',    // URL site
         'root'      => '/agenda19/',                    // root site
@@ -17,8 +17,7 @@ class AppConfig {
         'password'  => '',                              // db password
         'database'  => 'agenda19',                      // db name
         'temp'      => 'ag19-1',                        // site template folder
-        'dfl'       => 'eng',                           // Default lang (lat = SR-latinica, cyr = SR-cirilica, eng = English)
-        'home'      => 'news'                           // Default content
+        'dfl'       => 'eng'                            // Default lang (lat = SR-latinica, cyr = SR-cirilica, eng = English)
     ];
 
     // Lang data - srpski
@@ -40,7 +39,8 @@ class AppConfig {
         'meta_desc'     => 'Дигитални магазин који се бави новим, модерним, популарним темама. Има места за свакога. Можете много да научите и себи поправите дан.',
         'meta_keys'     => 'наука, мудрости, филозофија, мотивација, електроника, програмирање, уметност, приче, политика, интернет, блог, живот, магазин',
         'meta_auth'     => 'Агенда19 Тим',
-        'g_message'     => 'Поштовани посетиоци, да би сте видели цео садржај сајта, довољно је да унесете ваш Имејл у регистрацији.<br>(Промо период - бесплатно)'
+        'g_message'     => 'Поштовани посетиоци, да би сте видели цео садржај сајта, довољно је да унесете ваш Имејл у регистрацији.<br>(Промо период - бесплатно)',
+        'works_mess'    => 'Радови на сајту у наредних месец дана.'
     ];
 
     // Lang data - engleski
@@ -62,7 +62,8 @@ class AppConfig {
         'meta_desc'     => 'A digital magazine that covers new, modern, popular topics. There is something for everyone. You can learn a lot and improve your day.',
         'meta_keys'     => 'science, wisdom, philosophy, motivation, electronics, programming, art, stories, politics, internet, blog, life, magazine',
         'meta_auth'     => 'Agenda19 Team',
-        'g_message'     => 'Dear visitors, to view the full content of the site, it is enough to enter your email in the registration.<br>(Promo period - free)'
+        'g_message'     => 'Dear visitors, to view the full content of the site, it is enough to enter your email in the registration.<br>(Promo period - free)',
+        'works_mess'    => 'Works on the site in the next month.'
     ];
 
     // Get config parametar (one)

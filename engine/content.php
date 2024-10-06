@@ -36,20 +36,19 @@ class Content extends AppConfig {
 	private static function Nav() {
 		
 		global $lett, $opt1;
-		
-		$home = AppConfig::GetConfig('home');
+
 		$ln = Links::GetLinks($lett);
 		
-		if ($opt1 == $home) {
-			$h = "class='active'";$m = '';$k = '';$a = '';
-		} elseif ($opt1 == 'magazin') {
-			$m = "class='active'";$h = '';$k = '';$a = '';
-		} elseif ($opt1 == 'categories') {
-			$k = "class='active'";$h = '';$m = '';$a = '';
-		} elseif ($opt1 == 'archive') {
-			$a = "class='active'";$h = '';$k = '';$m = '';
+		if ($opt1 == $ln['novosti']) {
+			$n = "class='active'";$m = '';$k = '';$a = '';
+		} elseif ($opt1 == $ln['magazin']) {
+			$m = "class='active'";$n = '';$k = '';$a = '';
+		} elseif ($opt1 == $ln['kategorije']) {
+			$k = "class='active'";$n = '';$m = '';$a = '';
+		} elseif ($opt1 == $ln['arhiva']) {
+			$a = "class='active'";$n = '';$k = '';$m = '';
 		} else {
-			$h = '';$m = '';$k = '';$a = '';
+			$n = '';$m = '';$k = '';$a = '';
 		}
 
 		$temp 	= AppConfig::GetConfig('temp');
@@ -103,17 +102,41 @@ class Content extends AppConfig {
 		$file 				= !empty($opt1) ? $opt1 : '';
 	    $file_path 			= $base_dir . $file . '.php';
 	    $file_path_general 	= $base_dir_general . $file . '.php';
+		
+		if ((AppConfig::GetConfig('works') !== 0) && ((USERTYPE == 'gost') OR (USERTYPE == 'novajlija') OR (USERTYPE == 'clan') OR (USERTYPE == 'harambasa'))) {
+	        
+			$works = AppConfig::GetLang($lett, 'works_mess');
 
-		if (file_exists($file_path)) {
-	            
-	        require_once $file_path;
-	    } else if (file_exists($file_path_general)) {
-        		
-        	require_once $file_path_general;
-    	} else {
+	        if ($lang == 'en') {
+	        	
+	        	require_once 'temp/' . $temp . '/inc/' . $lang . '/common/works.php';
 
-	    	require_once $base_dir_general . 'info.php';
-	    }
+	  	    	if ($opt1 == 'sign-in') {
+	        	
+	        		require_once 'temp/' . $temp . '/inc/'. $lang .'/gost/sign-in.php';
+	        	}
+	    	} elseif ($lang == 'sr') {
+
+	    		require_once 'temp/' . $temp . '/inc/' . $lang . '/common/radovi.php';
+
+	    		if ($opt1 == 'prijavi-se') {
+	        	
+	        		require_once 'temp/' . $temp . '/inc/'. $lang .'/gost/prijavi-se.php';
+	        	}
+	    	}
+		} else {
+			
+			if (file_exists($file_path)) {
+		            
+		        require_once $file_path;
+		    } else if (file_exists($file_path_general)) {
+	        		
+	        	require_once $file_path_general;
+	    	} else {
+
+		    	require_once $base_dir_general . 'info.php';
+		    }
+		}
 
 		return $content;
 	}
