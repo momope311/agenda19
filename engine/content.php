@@ -85,9 +85,31 @@ class Content extends AppConfig {
 	
 	private static function Content() {
 		
+		global $lett, $opt1, $opt2, $opt3, $opt4;
+
+		if (($lett == 'lat') OR ($lett == 'cyr')) {
+
+			$lang = 'sr';
+		} elseif ($lett == 'eng') {
+
+			$lang = 'en';
+		}
+
 		$temp = AppConfig::GetConfig('temp');
-		
-		require_once 'temp/'.$temp.'/content.php';
+
+		$base_dir 			= 'temp/' . $temp . '/inc/' . $lang .'/'. USERTYPE . '/';
+		$base_dir_general 	= 'temp/' . $temp . '/inc/' . $lang . '/common/';
+		$file 				= !empty($opt1) ? $opt1 : '';
+	    $file_path 			= $base_dir . $file . '.php';
+
+		if (file_exists($file_path)) {
+	            
+	        require_once $file_path;
+	    } else {
+
+	    	require_once $base_dir_general . 'info.php';
+	    }
+
 		return $content;
 	}
 
@@ -96,9 +118,12 @@ class Content extends AppConfig {
 		global $lett;
 		
 		$temp = AppConfig::GetConfig('temp');
+		$root = AppConfig::GetConfig('root');
+		
 		$copy = AppConfig::GetLang($lett, 'copy');
 		
 		require_once 'temp/'.$temp.'/footer.php';
+		
 		return $footer;
 	}
 }
