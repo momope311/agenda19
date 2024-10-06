@@ -16,47 +16,20 @@ if (isset($_POST['submit'])) {
 	}
 }
 
-$poruka1 = "<p>Унесите ваш Имејл и стићи ће вам подаци за пријаву.</p>";
-
-/*"<p>Унесите ваш имејл и стићи ће вам обавештење. Такође, бићете преусмерени на линк за претплату.<br>
-    Кад завршите цео процес, на имејл ће вам стићи подаци за пријаву на сајт.</p>";
-*/
-
-$poruka2 = '';
-
-/*"<br><br><br><p>
-За нестрпљиве: <a href='https://www.paypal.com/ncp/payment/HV6464FZFFYT4'>PayPal, platne kartice...</a><br><br>
-Ако имате проблема или питања у вези претплате,<br>пошаљите поруку на наш имејл:<br>
-kancelarija@agenda19.com
-</p>";
-*/
-
-$cont =
+$content =
 "
-<section class='page-section mt-5' id='registracija'>
-<div class='container text-center'>
-<div class='text-center'>
-<h2 class='page-section-heading text-secondary mb-0 d-inline-block'>Регистрација</h2>
-</div>
-<div class='divider-custom'>
-    <div class='divider-custom-line'></div>
-    <div class='divider-custom-icon'><i class='fas fa-star'></i></div>
-    <div class='divider-custom-line'></div>
-</div>
+<section id='content'>
+<h1 class='cent'>Регистрација</h1>
 $e
-<form action='' method='post'>
+<form action='' method='post' onsubmit='scrollToAnchor()'>
+    <p class='cent'>
+    И-мејл * :
     <br>
-    $poruka1
-    Имејл * :
+    <input type='text' name='email' maxlength='64' placeholder='Ваша електронска пошта' class='medinput'>
     <br>
-    <div class='d-flex justify-content-center'>
-        <input type='text' name='email' maxlength='64' placeholder='Електронска пошта' class='form-control w-50 mt-2 min1'>
-    </div>
-    <br>
-    <input type='submit' name='submit' class='btn btn-primary btn-large-text' value='Потврди'>
+    <input type='submit' name='submit' class='medbut' value='Прихвати'>
+    </p>
 </form>
-$poruka2
-</div>
 </section>
 ";
 

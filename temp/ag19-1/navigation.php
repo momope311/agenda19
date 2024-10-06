@@ -6,7 +6,7 @@ $navigation =
 <section id='nav-wrap'>
 	<div id='navigation'>
 		<ul id='left-menu'>
-			<li><a href='".$url.$lett."'>".$title."</a></li>
+			<li><a href='".$url."'>".$title."</a></li>
 		</ul>
 		<ul id='right-menu'>
 			<li><a ".$h." href='".$root.$lett."/".$ln['novosti']."'>".$home."</a></li>

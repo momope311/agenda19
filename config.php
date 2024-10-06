@@ -25,6 +25,7 @@ class AppConfig {
     private static $lang_sr = [
         
         'html_lang'     => 'sr',
+        'homepage'      => 'novosti',
         'home'          => 'Новости',
         'title'         => 'Агенда19',
         'magazin'       => 'Магазин',
@@ -46,6 +47,7 @@ class AppConfig {
     private static $lang_en = [
         
         'html_lang'     => 'en',
+        'homepage'      => 'news',
         'home'          => 'News',
         'title'         => 'Agenda19',
         'magazin'       => 'Magazin',
@@ -127,6 +129,11 @@ class AppConfig {
 
         $path = array_pad($path, 5, '');
         
+        if (empty($path[1])) {
+            
+            $path[1] = self::GetLang($path[0], 'homepage');
+        }
+
         return $path;
     }
 }

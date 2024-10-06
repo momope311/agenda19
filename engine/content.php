@@ -99,13 +99,18 @@ class Content extends AppConfig {
 
 		$base_dir 			= 'temp/' . $temp . '/inc/' . $lang .'/'. USERTYPE . '/';
 		$base_dir_general 	= 'temp/' . $temp . '/inc/' . $lang . '/common/';
+		
 		$file 				= !empty($opt1) ? $opt1 : '';
 	    $file_path 			= $base_dir . $file . '.php';
+	    $file_path_general 	= $base_dir_general . $file . '.php';
 
 		if (file_exists($file_path)) {
 	            
 	        require_once $file_path;
-	    } else {
+	    } else if (file_exists($file_path_general)) {
+        		
+        	require_once $file_path_general;
+    	} else {
 
 	    	require_once $base_dir_general . 'info.php';
 	    }

@@ -156,6 +156,12 @@ ul#left-menu li a {
 	color: darkred;
 	text-align: center;
 }
+.red {
+	color: darkred;
+}
+.green {
+	color: darkgreen;
+}
 .medinput {
 	max-width: 300px;
 	width: 90%;

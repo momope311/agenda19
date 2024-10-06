@@ -41,18 +41,9 @@ if ($opt2 == 'email-sent') {
 
 $content =
 "
-<section class='page-section mt-5' id='info'>
-<div class='container'>
-<div class='text-center'>
-<h2 class='page-section-heading text-secondary mb-0 d-inline-block'>ИНФО</h2>
-</div>
-<div class='divider-custom'>
-    <div class='divider-custom-line'></div>
-    <div class='divider-custom-icon'><i class='fas fa-star'></i></div>
-    <div class='divider-custom-line'></div>
-</div>
+<section id='content'>
+<h1 class='cent'>ИНФО</h1>
 $e
-</div>
 </section>
 ";
 
