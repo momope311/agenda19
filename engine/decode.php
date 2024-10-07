@@ -90,8 +90,9 @@ class Decode extends AppConfig {
 
 		$body = Content::Body();
 
-		$temp = AppConfig::GetConfig('temp');
-		$root = AppConfig::GetConfig('root');
+		$temp = AppConfig::$conf_public['temp'];
+		$root = AppConfig::$conf_public['root'];
+		
 		$lb = AppConfig::GetLangAll($lett);
 
 		return $conversion_table = array (

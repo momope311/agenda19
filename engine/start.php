@@ -17,13 +17,13 @@ class Start extends AppConfig {
         ob_start();
 		
         // protected maximum login try
-        if (isset($_COOKIE['max_logins']) AND $_COOKIE['max_logins'] >= 4) {
+        if (isset($_COOKIE['max_logins']) AND $_COOKIE['max_logins'] >= 3) {
             
             die('You are currently blocked. Signin Failed! Clear your entire browser history. And restart the browser.');
         }
 
         // protected maximum register try
-        if (isset($_COOKIE['max_regs']) AND $_COOKIE['max_regs'] >= 4) {
+        if (isset($_COOKIE['max_regs']) AND $_COOKIE['max_regs'] >= 3) {
             
             die('You are currently blocked. Register Failed! Clear your entire browser history. And restart the browser.');
         }

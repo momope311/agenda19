@@ -3,23 +3,29 @@ if(!defined('PROTECT')){die('Protected Content!');}
 
 class AppConfig {
     
+    // Public config data (accessible without method)
+    public static $conf_public = [
+        
+        'url'       => 'http://localhost/agenda19/',    // URL site
+        'root'      => '/agenda19/',                    // Root site
+        'temp'      => 'ag19-1'                         // site template folder
+    ];
+
     // Config data
     private static $conf = [
         
         'errors'    => 1,                               // Display errors 1 = yes 0 = no
         'works'     => 0,                               // Works on site 0 = no 1 = yes
         'compress'  => 0,                               // Compress html content
-        'url'       => 'http://localhost/agenda19/',    // URL site
-        'root'      => '/agenda19/',                    // root site
         'site'      => 'agenda19',                      // cookie name
-        'hostname'  => 'localhost',                     // hostname
+        'dfl'       => 'eng',                           // Default lang (lat = SR-latinica, cyr = SR-cirilica, eng = English)
+        
+        // database
+        'hostname'  => '',                              // hostname
         'username'  => '',                              // db username
         'password'  => '',                              // db password
         'database'  => '',                              // db name
-        'temp'      => 'ag19-1',                        // site template folder
-        'dfl'       => 'eng',                           // Default lang (lat = SR-latinica, cyr = SR-cirilica, eng = English)
         
-
         // email data
         'smtp_host'         => '',
         'smtp_username'     => '',

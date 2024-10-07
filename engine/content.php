@@ -5,8 +5,8 @@ class Content extends AppConfig {
 	
 	public function __construct() {
 
-		$temp = AppConfig::GetConfig('temp');
-		$root = AppConfig::GetConfig('root');
+		$temp = AppConfig::$conf_public['temp'];
+		$root = AppConfig::$conf_public['root'];
 		
 		require_once 'temp/'.$temp.'/site.php';
 	}
@@ -14,8 +14,6 @@ class Content extends AppConfig {
 	public static function Body() {
 
 		global $opt1;
-
-		$site = AppConfig::GetConfig('site');
 
 		return self::Nav().self::Front().self::Content().self::Footer();
 	}
@@ -48,9 +46,9 @@ class Content extends AppConfig {
 			$e = '';$l = '';$c = '';
 		}
 
-		$temp 	= AppConfig::GetConfig('temp');
-		$root 	= AppConfig::GetConfig('root');
-		$url 	= AppConfig::GetConfig('url');
+		$temp 	= AppConfig::$conf_public['temp'];
+		$root 	= AppConfig::$conf_public['root'];
+		$url	= AppConfig::$conf_public['url'];
 
 		$title 			= AppConfig::GetLang($lett, 'title');
 		$home 			= AppConfig::GetLang($lett, 'home');
@@ -63,6 +61,7 @@ class Content extends AppConfig {
 		$cirilica 		= AppConfig::GetLang($lett, 'cirilica');
 
 		require_once 'temp/'.$temp.'/navigation.php';
+		
 		return $navigation;	
 	}
 	
@@ -70,12 +69,13 @@ class Content extends AppConfig {
 		
 		global $lett;
 
-		$temp 	= AppConfig::GetConfig('temp');
-		$root 	= AppConfig::GetConfig('root');
+		$temp 	= AppConfig::$conf_public['temp'];
+		$root 	= AppConfig::$conf_public['root'];
 		$title 	= AppConfig::GetLang($lett, 'title');
 		$desc 	= AppConfig::GetLang($lett, 'desc');
 		
 		require_once 'temp/'.$temp.'/front.php';
+		
 		return $front;
 	}
 	
@@ -91,10 +91,10 @@ class Content extends AppConfig {
 			$lang = 'en';
 		}
 
-		$temp = AppConfig::GetConfig('temp');
+		$temp = AppConfig::$conf_public['temp'];
 
-		$base_dir 			= 'temp/' . $temp . '/inc/' . $lang .'/'. USERTYPE . '/';
-		$base_dir_general 	= 'temp/' . $temp . '/inc/' . $lang . '/common/';
+		$base_dir 			= 'temp/' . $temp . '/content/' . $lang .'/'. USERTYPE . '/';
+		$base_dir_general 	= 'temp/' . $temp . '/content/' . $lang . '/common/';
 		
 		$file 				= !empty($opt1) ? $opt1 : '';
 	    $file_path 			= $base_dir . $file . '.php';
@@ -106,19 +106,19 @@ class Content extends AppConfig {
 
 	        if ($lang == 'en') {
 	        	
-	        	require_once 'temp/' . $temp . '/inc/' . $lang . '/common/works.php';
+	        	require_once 'temp/' . $temp . '/content/' . $lang . '/common/works.php';
 
 	  	    	if ($opt1 == 'sign-in') {
 	        	
-	        		require_once 'temp/' . $temp . '/inc/'. $lang .'/gost/sign-in.php';
+	        		require_once 'temp/' . $temp . '/content/'. $lang .'/gost/sign-in.php';
 	        	}
 	    	} elseif ($lang == 'sr') {
 
-	    		require_once 'temp/' . $temp . '/inc/' . $lang . '/common/radovi.php';
+	    		require_once 'temp/' . $temp . '/content/' . $lang . '/common/radovi.php';
 
 	    		if ($opt1 == 'prijavi-se') {
 	        	
-	        		require_once 'temp/' . $temp . '/inc/'. $lang .'/gost/prijavi-se.php';
+	        		require_once 'temp/' . $temp . '/content/'. $lang .'/gost/prijavi-se.php';
 	        	}
 	    	}
 		} else {
@@ -142,8 +142,8 @@ class Content extends AppConfig {
 		
 		global $lett;
 		
-		$temp = AppConfig::GetConfig('temp');
-		$root = AppConfig::GetConfig('root');
+		$temp = AppConfig::$conf_public['temp'];
+		$root = AppConfig::$conf_public['root'];
 		
 		$copy = AppConfig::GetLang($lett, 'copy');
 		
