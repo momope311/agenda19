@@ -1,5 +1,6 @@
-
 # Web Razvoj
+
+**U korenom folderu treba da postoji fajl 'config.php' ali pošto sadrži osetljive podatke, nije prebačen na GitHub.**
 
 Dobrodošli u projekat **Web Razvoj**! Ovo je kratak pregled ključnih oblasti fokusa u ovom projektu.
 
