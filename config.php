@@ -17,7 +17,15 @@ class AppConfig {
         'password'  => '',                              // db password
         'database'  => 'agenda19',                      // db name
         'temp'      => 'ag19-1',                        // site template folder
-        'dfl'       => 'eng'                            // Default lang (lat = SR-latinica, cyr = SR-cirilica, eng = English)
+        'dfl'       => 'eng',                           // Default lang (lat = SR-latinica, cyr = SR-cirilica, eng = English)
+        
+
+        // email data
+        'smtp_host'         => 'mail.agenda19.com',
+        'smtp_username'     => 'bot@agenda19.com',
+        'smtp_password'     => 'your-password',
+        'email_from'        => 'bot@agenda19.com',
+        'email_from_name'   => 'Agenda19'
     ];
 
     // Lang data - srpski
