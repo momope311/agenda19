@@ -1,8 +1,8 @@
-# Web Development
+# Agenda19 Web Development
 
 **In the root folder, there should be a 'config.php' file, but since it contains sensitive data, it has not been uploaded to GitHub.**
 
-Welcome to the **Web Development** project! This is a brief overview of the key areas of focus in this project.
+Welcome to the **Agenda19 Web Development** project! This is a brief overview of the key areas of focus in this project.
 
 Task: Development of a website in the form of a blog/magazine or the creation of a complete CMS project. It depends on time, resources...
 

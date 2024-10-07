@@ -1,8 +1,8 @@
-# Web Razvoj
+# Agenda19 Web Razvoj
 
 **U korenom folderu treba da postoji fajl 'config.php' ali pošto sadrži osetljive podatke, nije prebačen na GitHub.**
 
-Dobrodošli u projekat **Web Razvoj**! Ovo je kratak pregled ključnih oblasti fokusa u ovom projektu.
+Dobrodošli u projekat **Agenda19 Web Razvoj**! Ovo je kratak pregled ključnih oblasti fokusa u ovom projektu.
 
 Zadatak: Razvoj veb sajta u formi bloga/magazina ili kreiranje kompletnog CMS projekta. To zavisi od vremena, resursa...
 
@@ -19,7 +19,6 @@ Ovaj projekat koristi sledeće tehnologije:
 - JavaScript (ES6+)
 - PHP 8.2
 - MySQL baza podataka
-- Bootstrap 5 (?)
 
 ## Funkcionalnosti
 - Responzivan dizajn veb sajta
